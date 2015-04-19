@@ -1,3 +1,6 @@
+#Asks user for 3 addresses and sorts each address into a list based on D.C.'s quadrant grid.
+#Tells user how many addresses were in each quadrant.
+
 northwest = []
 northeast = []
 southwest = []
