@@ -1,0 +1,21 @@
+# Prints out the song for 99 bottles of beer on the wall?
+
+# Begins:
+# 99 bottles of beer on the wall, 99 bottles of beer...
+# If one of those bottles should happen to fall, 98 bottles of beer on the wall
+
+# Ends:
+# If one of those bottles should happen to fall, 1 bottles of beer on the wall
+
+for i in range(99,0,-1):
+	if i < 99:
+		print "If one of those bottles should happen to fall, {0} bottles of beer on the wall".format(i)
+	if 1 < i:
+		print "{0} bottles of beer on the wall, {0} bottles of beer...".format(i)
+
+
+
+
+
+
+	
