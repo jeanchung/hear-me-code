@@ -1,10 +1,10 @@
-# Prints out the song for 99 bottles of beer on the wall?
+# Prints out the song for 99 bottles of beer on the wall
 
-# Begins:
+# Song begins:
 # 99 bottles of beer on the wall, 99 bottles of beer...
 # If one of those bottles should happen to fall, 98 bottles of beer on the wall
 
-# Ends:
+# Song ends:
 # If one of those bottles should happen to fall, 1 bottles of beer on the wall
 
 for i in range(99,0,-1):
