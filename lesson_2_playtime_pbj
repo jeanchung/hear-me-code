@@ -1,0 +1,29 @@
+# Prints "Making sandwich #" and the number of the sandwich until you are out of bread, peanut butter, or jelly.
+
+ingredient_names = ["bread", "peanut butter", "jelly"]
+bread = 5
+peanut_butter = 4
+jelly = 3
+i = 1
+
+while bread >= 2 and peanut_butter >= 1 and jelly >= 1:
+	print "Making sandwich #{0}...".format(i)
+	bread = bread - 2
+	peanut_butter = peanut_butter - 1
+	jelly = jelly - 1
+	i = i + 1
+	ingredients = [bread / 2, peanut_butter, jelly]
+	
+	if bread < 2 or peanut_butter < 1 or jelly < 1:
+		for number, item in enumerate(ingredients):
+			if item < 1:
+				print "All done; I ran out of {0}.".format(ingredient_names[number])
+
+# above for loop could also be replaced with:
+#		for j in range(len(ingredients)):
+#			ingredient = ingredients[j]
+#			if ingredient < 1:
+#				print "All done; I ran out of {0}.".format(ingredient_names[j])for item in ingredients:
+
+	else:
+		print "I have enough bread for {0} more sandwiches, enough peanut butter for {1} more, and enough jelly for {2} more.".format(bread,peanut_butter,jelly)
