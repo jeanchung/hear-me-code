@@ -29,3 +29,22 @@ for key in contacts.keys():
 	print "\t Phone: {0}".format(contacts[key]["phone"])
 	print "\t Twitter: {0}".format(contacts[key]["twitter"])
 	print "\t Github: {0}".format(contacts[key]["github"])
+
+# Goal 2:  Display that information as an HTML table.
+# Goal 3: Write all of the HTML out to a file called contacts.html and open it in your browser.
+
+with open("contacts.html", "w") as contacts_page:
+	contacts_page.write("""<table border="1">""")
+	for key in contacts.keys():
+		contacts_page.write("""<td colspan="2"> <b>{0}</b> </td>""".format(key))
+		contacts_page.write("""</tr>""")
+		contacts_page.write("""<tr>""")
+		contacts_page.write("""<td> Phone: {0} </td>""".format(contacts[key]["phone"]))
+		contacts_page.write("""</tr>""")
+		contacts_page.write("""<tr>""")			
+		contacts_page.write("""<td> Twitter: {0} </td>""".format(contacts[key]["twitter"]))
+		contacts_page.write("""</tr>""")
+		contacts_page.write("""<tr>""")
+		contacts_page.write("""<td> Github: {0} </td>""".format(contacts[key]["github"]))
+		contacts_page.write("""</tr>""")
+	contacts_page.write("""</table>""")		
