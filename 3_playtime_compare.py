@@ -14,6 +14,9 @@
 # Sample output:
 #       Shannon Turner took the survey! Here is her contact information: Twitter: @svt827 Github: @shannonturner Phone: 202-555-1234
 
+# Challenge 2: Add the extra information from survey.csv into all_employees.csv as extra columns.  
+# IMPORTANT: It would probably be a good idea to save it as an extra file instead of accidentally overwriting your original!
+# By the end, your all_employees.csv should contain the following columns: name, email, phone, department, position, twitter, github
 
 employee_info = {}
 
@@ -35,3 +38,14 @@ for idx, person in enumerate(survey_ppl):
 for person in survey_ppl[1:]:
 	if person[0] in employee_info:
 		print "{0} took the survey! Here is their contact information: Twitter: {1} Github: {2} Phone: {3}".format(employee_info[person[0]][0], person[1], person[2], employee_info[person[0]][2])
+		employee_info[person[0]].append(person[1])
+		employee_info[person[0]].append(person[2])
+
+all_employees[0].extend(["twitter", "github"]) #adds twitter and github columns to title row
+
+with open("all_employees2.csv", "w") as company_file:
+	company_file.write(",".join(all_employees[0]))
+	company_file.write("\n")
+	for person in employee_info:
+		company_file.write(",".join(employee_info[person]))
+		company_file.write("\n")
