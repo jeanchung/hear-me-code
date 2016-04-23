@@ -1,4 +1,4 @@
-# Reads contact informaiton from contacts.csv and writes HTML code to display the information in a table to contacts.html
+# Reads contact information from contacts.csv and writes HTML code to display the information in a table to contacts.html
 
 with open("contacts.csv", "r") as contacts_data:
 	contacts = contacts_data.read().split("\n")
